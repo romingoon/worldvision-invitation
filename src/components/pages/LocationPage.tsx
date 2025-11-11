@@ -9,11 +9,9 @@ import {
   TramFront,
   Loader2,
 } from 'lucide-react';
-import { FaChurch } from 'react-icons/fa';
 import { Button } from '../ui/button';
-import { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import type { NaverMap } from '@/types/naver-maps';
-import { renderToStaticMarkup } from 'react-dom/server';
 
 interface LocationPageProps {
   venue: string;
@@ -35,22 +33,14 @@ export function LocationPage({ venue, venueAddress }: LocationPageProps) {
   const [locationLoading, setLocationLoading] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
 
-  const churchIconHtml = renderToStaticMarkup(
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '40px',
-        height: '40px',
-        background: '#FF6B35',
-        borderRadius: '50%',
-        boxShadow: '0 4px 6px rgba(0,0,0,0.2)',
-      }}
-    >
-      <FaChurch size={24} color="#ffffff" />
+  // 교회 아이콘 HTML (직접 문자열로 정의)
+  const churchIconHtml = `
+    <div style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #FF6B35; border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+      <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 640 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M464.46 246.68L352 179.2V128h48c8.84 0 16-7.16 16-16V80c0-8.84-7.16-16-16-16h-48V16c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v48h-48c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h48v51.2l-112.46 67.48A31.997 31.997 0 0 0 160 274.12V512h96v-96c0-35.35 28.65-64 64-64s64 28.65 64 64v96h96V274.12c0-11.24-5.9-21.66-15.54-27.44z"></path>
+      </svg>
     </div>
-  );
+  `;
 
   // 영락교회 좌표
   const CHURCH_COORDS = {
