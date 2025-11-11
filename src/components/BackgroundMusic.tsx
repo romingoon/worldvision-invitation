@@ -1,0 +1,122 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { Volume2, VolumeX } from 'lucide-react';
+
+export default function BackgroundMusic() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const unmuteTimerRef = useRef<number | null>(null);
+
+  // 시도: 페이지 진입 시 무음(auto-muted)으로 자동재생 → 곧바로 음소거 해제
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.volume = 0.6;
+    audio.muted = true;
+
+    const playPromise = audio
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+        setHasInteracted(true);
+        // 일부 브라우저 정책을 우회하기 위해 아주 짧은 지연 후 음소거 해제
+        unmuteTimerRef.current = window.setTimeout(() => {
+          if (audioRef.current) {
+            audioRef.current.muted = false;
+          }
+          unmuteTimerRef.current = null;
+        }, 200);
+      })
+      .catch(() => {
+        // 자동재생 실패 시, 사용자의 첫 상호작용을 기다림
+        setHasInteracted(false);
+      });
+
+    // 실제 오디오 상태 변화와 상태 동기화
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+    audio.addEventListener('play', onPlay);
+    audio.addEventListener('pause', onPause);
+
+    return () => {
+      audio.removeEventListener('play', onPlay);
+      audio.removeEventListener('pause', onPause);
+      if (unmuteTimerRef.current) {
+        clearTimeout(unmuteTimerRef.current);
+        unmuteTimerRef.current = null;
+      }
+      // 컴포넌트 언마운트 시 안전 정지
+      playPromise?.finally(() => {
+        audio.pause();
+      });
+    };
+  }, []);
+
+  const handleFirstInteraction = async () => {
+    if (!hasInteracted && audioRef.current) {
+      try {
+        audioRef.current.muted = false;
+        await audioRef.current.play();
+        setIsPlaying(true);
+        setHasInteracted(true);
+      } catch (error) {
+        console.log('자동재생 실패:', error);
+      }
+    }
+  };
+
+  const togglePlay = async () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        // 대기 중인 무음 해제 타이머가 있다면 취소
+        if (unmuteTimerRef.current) {
+          clearTimeout(unmuteTimerRef.current);
+          unmuteTimerRef.current = null;
+        }
+        audioRef.current.pause();
+        setIsPlaying(false); // 이벤트 리스너로도 동기화되지만 즉시 반영
+      } else {
+        try {
+          await audioRef.current.play();
+          setIsPlaying(true);
+        } catch (e) {
+          console.log('재생 실패:', e);
+        }
+      }
+      setHasInteracted(true);
+    }
+  };
+
+  return (
+    <>
+      <audio
+        ref={audioRef}
+        src="/music/background.mp3"
+        loop
+        preload="auto"
+        playsInline
+      />
+
+      {/* 자동재생 실패 시 나타나는 작은 시작 버튼 */}
+      {!hasInteracted && !isPlaying && (
+        <button
+          onClick={handleFirstInteraction}
+          className="fixed bottom-4 right-4 z-50 px-3 py-2 rounded-full bg-white/90 shadow-md text-sm"
+        >
+          음악 켜기
+        </button>
+      )}
+
+      {/* 음악 컨트롤 버튼 */}
+      <button
+        onClick={togglePlay}
+        className="fixed top-4 right-4 z-50 p-2 rounded-full bg-white/80"
+        aria-label={isPlaying ? '배경음악 끄기' : '배경음악 켜기'}
+      >
+        {isPlaying ? <Volume2 size={20} /> : <VolumeX size={20} />}
+      </button>
+    </>
+  );
+}

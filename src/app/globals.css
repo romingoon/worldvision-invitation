@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -45,37 +44,45 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* 배너 컬러 팔레트 - WorldVision 75주년 */
+  --color-magenta: #ff1493; /* 핫 핑크/마젠타 */
+  --color-orange: #ff6b35; /* 따뜻한 오렌지 */
+  --color-beige: #fffef7; /* 베이지/오프 화이트 배경 */
+  --color-dark-gray: #333333; /* 다크 그레이 텍스트 */
+  --color-magenta-light: #ffb6e1; /* 밝은 마젠타 */
+  --color-orange-light: #ffb88c; /* 밝은 오렌지 */
+
+  --background: #fffef7; /* 베이지 배경 */
+  --foreground: #333333; /* 다크 그레이 텍스트 */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: #333333;
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --popover-foreground: #333333;
+  --primary: #ff6b35; /* 오렌지를 primary로 */
+  --primary-foreground: #ffffff;
+  --secondary: #fffef7;
+  --secondary-foreground: #333333;
+  --muted: #f5f5dc; /* 베이지 muted */
+  --muted-foreground: #666666;
+  --accent: #ff1493; /* 마젠타를 accent로 */
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #ff6b35; /* 오렌지 ring */
+  --chart-1: #ff6b35; /* 오렌지 */
+  --chart-2: #ff1493; /* 마젠타 */
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #fffef7;
+  --sidebar-foreground: #333333;
+  --sidebar-primary: #ff6b35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ff1493;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #ff6b35;
 }
 
 .dark {
@@ -118,5 +125,35 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: var(--color-beige);
+    color: var(--color-dark-gray);
+  }
+}
+
+/* 배너 컬러 유틸리티 클래스 */
+@layer utilities {
+  .bg-magenta {
+    background-color: var(--color-magenta);
+  }
+  .bg-orange {
+    background-color: var(--color-orange);
+  }
+  .bg-beige {
+    background-color: var(--color-beige);
+  }
+  .text-magenta {
+    color: var(--color-magenta);
+  }
+  .text-orange {
+    color: var(--color-orange);
+  }
+  .text-dark-gray {
+    color: var(--color-dark-gray);
+  }
+  .bg-magenta-light {
+    background-color: var(--color-magenta-light);
+  }
+  .bg-orange-light {
+    background-color: var(--color-orange-light);
   }
 }
