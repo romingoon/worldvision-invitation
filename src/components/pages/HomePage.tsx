@@ -146,24 +146,6 @@ export function HomePage({
             월드비전과 월드비전 합창단의<br></br> 역사 속으로 초대합니다!
           </p>
         </motion.div>
-
-        {/* Organizer Badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="mt-8"
-        >
-          <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3 py-2.5 rounded-full shadow-lg">
-            <Music className="w-4 h-4" style={{ color: '#FF6B35' }} />
-            <span
-              className="text-xs tracking-wide"
-              style={{ color: '#FF6B35' }}
-            >
-              {organizer}
-            </span>
-          </div>
-        </motion.div>
       </div>
     </div>
   );
