@@ -62,6 +62,13 @@ export default function RootLayout({
         {/* 로컬 폰트 프리로드 - 카카오톡 인앱브라우저 호환 */}
         <link
           rel="preload"
+          href="/fonts/NanumBarunGothic.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
           href="/fonts/NanumBarunGothicRegular.woff2"
           as="font"
           type="font/woff2"
@@ -75,12 +82,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body
-        className={`${NanumBarunGothic.variable} font-NanumBarunGothic`}
-        suppressHydrationWarning
-      >
+      <body suppressHydrationWarning>
         <ImagePreloader />
-        <main className="pb-20">
+        <main
+          className={`${NanumBarunGothic.variable} font-NanumBarunGothic pb-20`}
+        >
           {children} <Analytics />
           <KakaoScript />
           <BackgroundMusic />
