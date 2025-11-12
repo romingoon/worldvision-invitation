@@ -41,14 +41,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${NanumBarun.variable} font-NanumBarun`}>
+    <html lang="ko" className="font-sans">
       <head></head>
-      <body
-        className={`${NanumBarun.variable} font-NanumBarun`}
-        suppressHydrationWarning
-      >
+      <body suppressHydrationWarning>
         <ImagePreloader />
-        <main className={`${NanumBarun.variable} font-NanumBarun pb-20`}>
+        <main className="pb-20">
           {children} <Analytics />
           <KakaoScript />
           <BackgroundMusic />

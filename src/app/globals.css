@@ -3,28 +3,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Nanum Barun Gothic 로컬 폰트 - 카카오톡 인앱브라우저 호환 */
-@font-face {
-  font-family: 'Nanum Barun Gothic';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/fonts/NanumBarunGothic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Nanum Barun Gothic';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/NanumBarunGothicRegular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Nanum Barun Gothic';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/NanumBarunGothicBold.woff2') format('woff2');
+@theme {
+  --font-NanumBarun: var(--font-NanumBarun);
+  --font-sans: var(--font-NanumBarun);
 }
 
 @theme inline {
