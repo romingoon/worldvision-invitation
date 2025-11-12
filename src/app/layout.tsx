@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/thumnail.jpg',
-        width: 1200,
-        height: 630,
+        url: '/images/thumnail.png',
+        width: 800,
+        height: 400,
         alt: '미리보기 이미지 설명',
       },
     ],
