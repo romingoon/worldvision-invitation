@@ -7,7 +7,6 @@ import { ConcertInfoPage } from '../components/pages/ConcertInfoPage';
 import { ProgramPage } from '../components/pages/ProgramPage';
 import { LocationPage } from '../components/pages/LocationPage';
 import { ShareSection } from '../components/ShareSection';
-import localFont from 'next/font/local';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -33,12 +32,6 @@ export default function App() {
     venueImage:
       'https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191207_200%2F1575645003467FPzEl_JPEG%2Fy7NcXhRAN3M-rgQCsjWM4WE0.jpg',
   };
-
-  const NanumBarunGothic = localFont({
-    src: '../../fonts/NanumBarunGothic.woff2',
-    variable: '--font-byulbam',
-    display: 'swap',
-  });
 
   // Handle scroll to update active tab
   useEffect(() => {
@@ -93,7 +86,6 @@ export default function App() {
           <HomePage
             title={concertData.title}
             subtitle={concertData.subtitle}
-            organizer={concertData.organizer}
             concertDate={concertData.concertDate}
             concertTime1={concertData.concertTime1}
             concertTime2={concertData.concertTime2}

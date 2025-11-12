@@ -7,7 +7,23 @@ import BackgroundMusic from '../components/BackgroundMusic';
 import localFont from 'next/font/local';
 
 const NanumBarunGothic = localFont({
-  src: '../../fonts/NanumBarunGothic.woff2',
+  src: [
+    {
+      path: '../../public/fonts/NanumBarunGothic.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NanumBarunGothicRegular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NanumBarunGothicBold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
   variable: '--font-NanumBarunGothic',
   display: 'swap',
 });
@@ -60,7 +76,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${NanumBarunGothic.variable} font-NanumBarunGothic `}
+        className={`${NanumBarunGothic.variable} font-NanumBarunGothic`}
         suppressHydrationWarning
       >
         <ImagePreloader />

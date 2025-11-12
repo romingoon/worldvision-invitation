@@ -1,11 +1,11 @@
+'use client';
+
 import { motion } from 'framer-motion';
-import { Music } from 'lucide-react';
 import Image from 'next/image';
 import '../../app/globals.css';
 interface HomePageProps {
   title: string;
   subtitle: string;
-  organizer: string;
   concertDate: string;
   concertTime1: string;
   concertTime2: string;
@@ -15,7 +15,6 @@ interface HomePageProps {
 export function HomePage({
   title,
   subtitle,
-  organizer,
   concertDate,
   concertTime1,
   concertTime2,

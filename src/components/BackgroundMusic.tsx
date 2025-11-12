@@ -8,6 +8,7 @@ export default function BackgroundMusic() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
   const unmuteTimerRef = useRef<number | null>(null);
+  const isPlayingRef = useRef(false);
 
   // 시도: 페이지 진입 시 무음(auto-muted)으로 자동재생 → 곧바로 음소거 해제
   useEffect(() => {
@@ -16,14 +17,18 @@ export default function BackgroundMusic() {
     audio.volume = 0.6;
     audio.muted = true;
 
-    const playPromise = audio
+    let isMounted = true;
+
+    audio
       .play()
       .then(() => {
+        if (!isMounted) return;
         setIsPlaying(true);
         setHasInteracted(true);
+        isPlayingRef.current = true;
         // 일부 브라우저 정책을 우회하기 위해 아주 짧은 지연 후 음소거 해제
         unmuteTimerRef.current = window.setTimeout(() => {
-          if (audioRef.current) {
+          if (audioRef.current && isMounted) {
             audioRef.current.muted = false;
           }
           unmuteTimerRef.current = null;
@@ -31,12 +36,20 @@ export default function BackgroundMusic() {
       })
       .catch(() => {
         // 자동재생 실패 시, 사용자의 첫 상호작용을 기다림
-        setHasInteracted(false);
+        if (isMounted) {
+          setHasInteracted(false);
+        }
       });
 
     // 실제 오디오 상태 변화와 상태 동기화
-    const onPlay = () => setIsPlaying(true);
-    const onPause = () => setIsPlaying(false);
+    const onPlay = () => {
+      setIsPlaying(true);
+      isPlayingRef.current = true;
+    };
+    const onPause = () => {
+      setIsPlaying(false);
+      isPlayingRef.current = false;
+    };
     audio.addEventListener('play', onPlay);
     audio.addEventListener('pause', onPause);
 
@@ -49,7 +62,7 @@ export default function BackgroundMusic() {
         }
       } else {
         // 페이지로 돌아올 때 (사용자가 수동으로 끈 경우가 아니라면 재생)
-        if (audioRef.current && hasInteracted && isPlaying) {
+        if (audioRef.current && isPlayingRef.current) {
           audioRef.current.play().catch(() => {
             // 재생 실패 시 무시
           });
@@ -60,6 +73,7 @@ export default function BackgroundMusic() {
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
+      isMounted = false;
       audio.removeEventListener('play', onPlay);
       audio.removeEventListener('pause', onPause);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
@@ -68,11 +82,9 @@ export default function BackgroundMusic() {
         unmuteTimerRef.current = null;
       }
       // 컴포넌트 언마운트 시 안전 정지
-      playPromise?.finally(() => {
-        audio.pause();
-      });
+      audio.pause();
     };
-  }, []);
+  }, []); // 의존성 배열을 비워서 mount/unmount 시에만 실행
 
   const handleFirstInteraction = async () => {
     if (!hasInteracted && audioRef.current) {
