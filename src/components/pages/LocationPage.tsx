@@ -44,8 +44,8 @@ export function LocationPage({ venue, venueAddress }: LocationPageProps) {
 
   // 영락교회 좌표
   const CHURCH_COORDS = {
-    lat: 37.564243536671,
-    lng: 126.98999850251,
+    lat: 37.5649,
+    lng: 126.9917,
   };
 
   // 사용자 현재 위치 가져오기
