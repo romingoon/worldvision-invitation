@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const NanumBarun = localFont({
-  src: './font/NanumBarunGothic.woff2',
+  src: './font/NanumBarunGothic.ttf',
   variable: '--font-NanumBarun',
   display: 'swap',
 });
