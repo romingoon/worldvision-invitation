@@ -147,7 +147,7 @@ export function ProgramPage() {
                       className="w-4 h-4 mt-0.5 shrink-0"
                       style={{ color: '#FF6B35' }}
                     />
-                    <div>
+                    <div className="flex items-baseline gap-2 flex-wrap">
                       <h3
                         className="leading-snug"
                         style={{
@@ -159,8 +159,7 @@ export function ProgramPage() {
                       >
                         {item.songTitle}
                       </h3>
-                      <p
-                        className="mt-0.5"
+                      <span
                         style={{
                           color: '#777777',
                           fontSize: 'clamp(0.72rem, 2.6vw, 0.8rem)',
@@ -168,13 +167,13 @@ export function ProgramPage() {
                         }}
                       >
                         {item.composer}
-                      </p>
+                      </span>
                     </div>
                   </div>
 
                   {/* Performers */}
                   <Separator className="my-3 bg-[#F1F1F1]" />
-                  <div className="flex items-start gap-2 pl-6">
+                  <div className="flex items-center gap-2 pl-6">
                     <span
                       className="px-2 py-0.5 rounded-full"
                       style={{
