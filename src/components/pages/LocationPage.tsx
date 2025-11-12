@@ -561,6 +561,30 @@ export function LocationPage({ venue, venueAddress }: LocationPageProps) {
                       지하철 노선 안내
                     </h1>
                     <p
+                      className="text-sm leading-relaxed mb-2"
+                      style={{
+                        color: '#666666',
+                        wordBreak: 'keep-all',
+                        lineHeight: 1.75,
+                        textWrap: 'balance',
+                        fontSize: 'clamp(0.88rem, 1.6vw, 1rem)',
+                      }}
+                    >
+                      - (2, 3호선) 을지로3가역 하차, 12번 출구에서 도보 5분
+                    </p>
+                    <p
+                      className="text-sm leading-relaxed mb-2"
+                      style={{
+                        color: '#666666',
+                        wordBreak: 'keep-all',
+                        lineHeight: 1.75,
+                        textWrap: 'balance',
+                        fontSize: 'clamp(0.88rem, 1.6vw, 1rem)',
+                      }}
+                    >
+                      - (3, 4호선) 충무로역 하차, 6번 출구에서 도보 10분
+                    </p>
+                    <p
                       className="text-sm leading-relaxed"
                       style={{
                         color: '#666666',
@@ -570,11 +594,7 @@ export function LocationPage({ venue, venueAddress }: LocationPageProps) {
                         fontSize: 'clamp(0.88rem, 1.6vw, 1rem)',
                       }}
                     >
-                      -(2,3호선) 을지로3가역 하차, 12번 출구에서 도보 5분
-                      <br />
-                      -(3, 4호선) 충무로역 하차, 6번 출구에서 도보 10분
-                      <br />
-                      -(4호선) 명동역 하차, 10번 출구에서 도보 10분
+                      - (4호선) 명동역 하차, 10번 출구에서 도보 10분
                     </p>
                   </div>
                 </div>

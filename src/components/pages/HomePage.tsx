@@ -75,6 +75,8 @@ export function HomePage({
                 fontFamily:
                   "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 transform: 'rotate(-1deg)',
+                wordBreak: 'keep-all',
+                maxWidth: '90vw',
               }}
             >
               {title}
