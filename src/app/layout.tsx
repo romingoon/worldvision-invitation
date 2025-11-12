@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${NanumBarun.variable}`}>
+    <html lang="ko" className={NanumBarun.variable}>
       <head></head>
       <body suppressHydrationWarning>
         <ImagePreloader />
