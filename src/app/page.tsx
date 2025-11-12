@@ -8,30 +8,6 @@ import { ProgramPage } from '../components/pages/ProgramPage';
 import { LocationPage } from '../components/pages/LocationPage';
 import { ShareSection } from '../components/ShareSection';
 
-import localFont from 'next/font/local';
-
-const NanumBarunGothic = localFont({
-  src: [
-    {
-      path: '../../public/fonts/NanumBarunGothic.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/NanumBarunGothicRegular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/NanumBarunGothicBold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-NanumBarunGothic',
-  display: 'swap',
-});
-
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -95,9 +71,7 @@ export default function App() {
   };
 
   return (
-    <div
-      className={`${NanumBarunGothic.variable} font-NanumBarunGothic h-screen overflow-hidden`}
-    >
+    <div className="h-screen overflow-hidden">
       <div
         ref={scrollContainerRef}
         className="h-full overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory"
