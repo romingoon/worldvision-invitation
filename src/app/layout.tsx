@@ -4,7 +4,6 @@ import ImagePreloader from '../components/ImagePreloader';
 import { Analytics } from '@vercel/analytics/next';
 import KakaoScript from '../components/KakaoScript';
 import BackgroundMusic from '../components/BackgroundMusic';
-import Script from 'next/script';
 
 const nanumBarunGothic = {
   style: {
@@ -44,21 +43,20 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        {/* 폰트 프리로드 - 카카오톡 브라우저 호환성 개선 */}
+        {/* 로컬 폰트 프리로드 - 카카오톡 인앱브라우저 호환 */}
         <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
+          rel="preload"
+          href="/fonts/NanumBarunGothicRegular.woff2"
+          as="font"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
+          rel="preload"
+          href="/fonts/NanumBarunGothicBold.woff2"
+          as="font"
+          type="font/woff2"
           crossOrigin="anonymous"
-        />
-        {/* Google Fonts 직접 로드 - PC 웹브라우저 호환성 */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Nanum+Barun+Gothic:wght@300;400;700&display=swap"
         />
       </head>
       <body style={nanumBarunGothic.style} suppressHydrationWarning>
