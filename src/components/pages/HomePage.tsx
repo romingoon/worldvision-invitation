@@ -26,7 +26,7 @@ export function HomePage({
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/background.png"
+          src="/images/background.jpg"
           className="w-full h-full object-cover"
           alt="Background"
           fill
@@ -34,7 +34,8 @@ export function HomePage({
           placeholder="blur"
           blurDataURL="image/jpeg;base64,..." // 자동 생성됨
         />
-        <div className="absolute inset-0 bg-white/10" />
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-6">
@@ -47,14 +48,14 @@ export function HomePage({
         >
           <div className="space-y-4">
             <p
-              className="text-sm text-white/95 tracking-wider"
+              className="text-sm tracking-wider"
               style={{
-                color: '#FFFEF7',
-                fontWeight: 600,
+                color: '#FFFFFF',
+                fontWeight: 700,
                 fontFamily:
                   "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.85rem, 2.6vw, 1rem)',
-                textShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
                 letterSpacing: '0.08em',
                 transform: 'rotate(-1deg)',
               }}
@@ -66,17 +67,18 @@ export function HomePage({
           {/* Main Title - Calligraphy Style */}
           <div className="px-4 py-8">
             <h1
-              className={`leading-tight tracking-wide text-shadow-lg/70`}
+              className={`leading-tight tracking-wide`}
               style={{
                 fontSize: 'clamp(2.2rem, 6vw, 3.5rem)',
                 fontWeight: 900,
-                color: '#FFFEF7',
+                color: '#FFFFFF',
                 letterSpacing: '0.02em',
                 fontFamily:
                   "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 transform: 'rotate(-1deg)',
                 wordBreak: 'keep-all',
                 maxWidth: '90vw',
+                textShadow: '0 3px 12px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6)',
               }}
             >
               {subtitle}
@@ -85,27 +87,27 @@ export function HomePage({
 
           <div className="space-y-3 pt-4">
             <p
-              className="text-base text-white/95"
+              className="text-base"
               style={{
-                color: '#FFFEF7',
-                fontWeight: 600,
+                color: '#FFFFFF',
+                fontWeight: 700,
                 fontFamily:
                   "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.95rem, 3vw, 1.125rem)',
-                textShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
               }}
             >
               {concertDate}
             </p>
             <div
-              className="text-sm text-white/90"
+              className="text-sm"
               style={{
-                color: '#FFFEF7',
-                fontWeight: 500,
+                color: '#FFFFFF',
+                fontWeight: 600,
                 fontFamily:
                   "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.9rem, 2.6vw, 1.05rem)',
-                textShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
                 wordBreak: 'keep-all',
               }}
             >
@@ -113,14 +115,14 @@ export function HomePage({
               <p>{concertTime2}</p>
             </div>{' '}
             <p
-              className="text-sm text-white/90"
+              className="text-sm"
               style={{
-                color: '#FFFEF7',
-                fontWeight: 500,
+                color: '#FFFFFF',
+                fontWeight: 600,
                 fontFamily:
                   "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.9rem, 2.6vw, 1.05rem)',
-                textShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
               }}
             >
               {venueDetail}
@@ -136,11 +138,11 @@ export function HomePage({
           className="text-center mt-12"
         >
           <p
-            className="text-lg text-white/95 px-8 py-3 rounded-2xl inline-block bg-black/40 backdrop-blur-[2px] shadow-lg ring-1 ring-white/10"
+            className="text-lg px-8 py-3 rounded-2xl inline-block bg-white/70 backdrop-blur-sm shadow-2xl ring-1 ring-black/20"
             style={{
-              color: '#FFFEF7',
-              fontWeight: 500,
-              textShadow: '0 3px 14px rgba(0,0,0,0.55)',
+              color: '#1A1410',
+              fontWeight: 700,
+              textShadow: '0 1px 2px rgba(255,255,255,0.8)',
               fontFamily: "'Nanum Myeongjo', 'Noto Serif KR', serif",
               wordBreak: 'keep-all',
             }}
