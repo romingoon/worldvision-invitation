@@ -5,15 +5,22 @@ import { Analytics } from '@vercel/analytics/next';
 import KakaoScript from '../components/KakaoScript';
 import BackgroundMusic from '../components/BackgroundMusic';
 
+const nanumBarunGothic = {
+  style: {
+    fontFamily:
+      "'Nanum Barun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif",
+  },
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://worldvision-invitation.vercel.app/'),
-  title: '2025 월드비전 합창단 기획연주 - Sound of Mission',
+  title: '한국 월드비전 창립 75주년 기념예배&기념음악회 - Sound of Mission',
   description: '2025년 11월 27일(목) 오후 6시 30분 영락교회 베다니홀',
   openGraph: {
-    title: '2025 월드비전 합창단 기획연주 - Sound of Mission ',
+    title: '한국 월드비전 창립 75주년 기념예배&기념음악회 - Sound of Mission ',
     description: 'Sound of Mission',
     url: 'https://worldvision-invitation.vercel.app',
-    siteName: '2025 월드비전 합창단 기획연주',
+    siteName: '한국 월드비전 창립 75주년 기념예배&기념음악회',
     type: 'article',
     images: [
       {
@@ -35,7 +42,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body suppressHydrationWarning>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nanum+Barun+Gothic:wght@300;400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body style={nanumBarunGothic.style} suppressHydrationWarning>
         <ImagePreloader />
         <main className="pb-20">
           {children} <Analytics />

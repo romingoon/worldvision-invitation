@@ -22,9 +22,9 @@ export function HomePage({
   venueDetail,
 }: HomePageProps) {
   return (
-    <div className="min-h-screen relative overflow-hidden pb-20">
+    <div className="min-h-screen relative overflow-hidden pb-10">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 flex items-center justify-center pb-32">
         <Image
           src="/images/background.jpg"
           className="w-full h-full object-cover"
@@ -53,9 +53,10 @@ export function HomePage({
                 color: '#FFFFFF',
                 fontWeight: 700,
                 fontFamily:
-                  "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
+                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.85rem, 2.6vw, 1rem)',
-                textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
+                textShadow:
+                  '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
                 letterSpacing: '0.08em',
                 transform: 'rotate(-1deg)',
               }}
@@ -74,11 +75,12 @@ export function HomePage({
                 color: '#FFFFFF',
                 letterSpacing: '0.02em',
                 fontFamily:
-                  "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
+                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 transform: 'rotate(-1deg)',
                 wordBreak: 'keep-all',
                 maxWidth: '90vw',
-                textShadow: '0 3px 12px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6)',
+                textShadow:
+                  '0 3px 12px rgba(0,0,0,0.8), 0 2px 6px rgba(0,0,0,0.6)',
               }}
             >
               {subtitle}
@@ -92,9 +94,10 @@ export function HomePage({
                 color: '#FFFFFF',
                 fontWeight: 700,
                 fontFamily:
-                  "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
+                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.95rem, 3vw, 1.125rem)',
-                textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
+                textShadow:
+                  '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
               }}
             >
               {concertDate}
@@ -105,9 +108,10 @@ export function HomePage({
                 color: '#FFFFFF',
                 fontWeight: 600,
                 fontFamily:
-                  "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
+                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.9rem, 2.6vw, 1.05rem)',
-                textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
+                textShadow:
+                  '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
                 wordBreak: 'keep-all',
               }}
             >
@@ -120,9 +124,10 @@ export function HomePage({
                 color: '#FFFFFF',
                 fontWeight: 600,
                 fontFamily:
-                  "ui-sans-serif, system-ui, -apple-system, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
+                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.9rem, 2.6vw, 1.05rem)',
-                textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
+                textShadow:
+                  '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
               }}
             >
               {venueDetail}
@@ -143,7 +148,7 @@ export function HomePage({
               color: '#1A1410',
               fontWeight: 700,
               textShadow: '0 1px 2px rgba(255,255,255,0.8)',
-              fontFamily: "'Nanum Myeongjo', 'Noto Serif KR', serif",
+              fontFamily: "'Nanum Barun Gothic', 'Noto Serif KR', serif",
               wordBreak: 'keep-all',
             }}
           >

@@ -20,12 +20,12 @@ export default function App() {
   });
 
   const concertData = {
-    title: '2025 월드비전 합창단 기획연주',
+    title: '한국 월드비전 창립 75주년 기념예배 & 기념음악회',
     subtitle: 'Sound of Mission',
     organizer: '월드비전',
     concertDate: '2025년 11월 27일(목)',
-    concertTime1: '오후 6시 30분 월드비전 창립 75주년 기념예배',
-    concertTime2: '오후 7시 30분 월드비전 합창단 기념음악회',
+    concertTime1: '오후 6시 30분 기념예배',
+    concertTime2: '오후 7시 30분 기념음악회',
     venue: '영락교회',
     venueDetail: '영락교회 베다니홀',
     venueAddress: '서울시 중구 수표로 33(저동2가)',

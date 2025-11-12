@@ -127,6 +127,7 @@
     @apply bg-background text-foreground;
     background-color: var(--color-beige);
     color: var(--color-dark-gray);
+    font-family: 'Nanum Barun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
   }
 }
 
