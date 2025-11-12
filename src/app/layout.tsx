@@ -4,13 +4,13 @@ import ImagePreloader from '../components/ImagePreloader';
 import { Analytics } from '@vercel/analytics/next';
 import KakaoScript from '../components/KakaoScript';
 import BackgroundMusic from '../components/BackgroundMusic';
+import localFont from 'next/font/local';
 
-const nanumBarunGothic = {
-  style: {
-    fontFamily:
-      "'Nanum Barun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-  },
-};
+const NanumBarunGothic = localFont({
+  src: '../../fonts/NanumBarunGothic.woff2',
+  variable: '--font-NanumBarunGothic',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://worldvision-invitation.vercel.app/'),
@@ -59,7 +59,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body style={nanumBarunGothic.style} suppressHydrationWarning>
+      <body
+        className={`${NanumBarunGothic.variable} font-NanumBarunGothic `}
+        suppressHydrationWarning
+      >
         <ImagePreloader />
         <main className="pb-20">
           {children} <Analytics />
