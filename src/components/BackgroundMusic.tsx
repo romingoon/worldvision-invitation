@@ -40,9 +40,29 @@ export default function BackgroundMusic() {
     audio.addEventListener('play', onPlay);
     audio.addEventListener('pause', onPause);
 
+    // 페이지 가시성 변화 감지 (홈 버튼으로 이탈 시 음악 정지)
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        // 페이지가 숨겨질 때 (홈 버튼, 다른 탭으로 이동 등)
+        if (audioRef.current && !audioRef.current.paused) {
+          audioRef.current.pause();
+        }
+      } else {
+        // 페이지로 돌아올 때 (사용자가 수동으로 끈 경우가 아니라면 재생)
+        if (audioRef.current && hasInteracted && isPlaying) {
+          audioRef.current.play().catch(() => {
+            // 재생 실패 시 무시
+          });
+        }
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
       audio.removeEventListener('play', onPlay);
       audio.removeEventListener('pause', onPause);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       if (unmuteTimerRef.current) {
         clearTimeout(unmuteTimerRef.current);
         unmuteTimerRef.current = null;
