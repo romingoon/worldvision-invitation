@@ -29,7 +29,7 @@ export function ProgramPage() {
     },
     {
       composer: '지혜정 편',
-      songTitle: '주는 나를 기르시는 목자요 & Amazing Grace',
+      songTitle: '주는 나를 기르시는 목자요 \n& Amazing Grace',
       performers: '월드비전 합창단 동문합창단',
     },
     {
@@ -45,7 +45,7 @@ export function ProgramPage() {
     {
       composer: '이수인, 이현철 편',
       songTitle: '별 & 고향의 봄',
-      performers: '월드비전 합창단 지역반 연합 & 소프라노 강혜정',
+      performers: '월드비전 합창단 지역반 연합 \n& 소프라노 강혜정',
     },
     {
       composer: '이현철',
@@ -147,7 +147,7 @@ export function ProgramPage() {
                       className="w-4 h-4 mt-0.5 shrink-0"
                       style={{ color: '#FF6B35' }}
                     />
-                    <div className="flex items-baseline gap-2 flex-wrap">
+                    <div className="text-content flex items-baseline gap-2 flex-wrap">
                       <h3
                         className="leading-snug"
                         style={{
@@ -193,7 +193,7 @@ export function ProgramPage() {
                     </span>
                     <div className="min-w-0">
                       <p
-                        className="text-sm sm:text-base text-left leading-relaxed"
+                        className="text-content text-sm sm:text-base text-left leading-relaxed"
                         style={{
                           color: '#333333',
                           fontWeight: 500,

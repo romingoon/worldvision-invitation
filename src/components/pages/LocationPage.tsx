@@ -15,6 +15,7 @@ import type { NaverMap } from '@/types/naver-maps';
 
 interface LocationPageProps {
   venue: string;
+  venueDetail: string;
   venueAddress: string;
   imageUrl: string;
 }
@@ -24,7 +25,11 @@ interface UserLocation {
   longitude: number;
 }
 
-export function LocationPage({ venue, venueAddress }: LocationPageProps) {
+export function LocationPage({
+  venue,
+  venueDetail,
+  venueAddress,
+}: LocationPageProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<NaverMap | null>(null); // 지도 인스턴스 저장
   const [scriptLoaded, setScriptLoaded] = useState(false); // 스크립트 로딩 상태
@@ -431,9 +436,9 @@ export function LocationPage({ venue, venueAddress }: LocationPageProps) {
               <div className="flex items-start gap-3">
                 <MapPin className="w-6 h-6 shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl mb-2 font-semibold">{venue}</h3>
+                  <h3 className="text-xl mb-2 font-semibold">{venueDetail}</h3>
                   <p
-                    className="text-sm leading-relaxed"
+                    className="text-content text-sm leading-relaxed"
                     style={{ color: 'rgba(255, 255, 255, 0.9)' }}
                   >
                     {venueAddress}

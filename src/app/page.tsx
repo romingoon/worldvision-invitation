@@ -28,7 +28,7 @@ export default function App() {
     concertTime2: '오후 7시 30분 기념음악회',
     venue: '영락교회',
     venueDetail: '영락교회 베다니홀',
-    venueAddress: '서울시 중구 수표로 33(저동2가)',
+    venueAddress: '서울시 중구 수표로 33(저동2가) \n영락교회 50주년 기념관 B3',
     venueImage:
       'https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191207_200%2F1575645003467FPzEl_JPEG%2Fy7NcXhRAN3M-rgQCsjWM4WE0.jpg',
   };
@@ -128,6 +128,7 @@ export default function App() {
           <LocationPage
             venue={concertData.venue}
             venueAddress={concertData.venueAddress}
+            venueDetail={concertData.venueDetail}
             imageUrl={concertData.venueImage}
           />
         </section>

@@ -104,7 +104,8 @@ export function ConcertInfoPage({ title }: ConcertInfoPageProps) {
                 되기를.
               </p>
               <p>
-                월드비전 합창단의 여정 속으로, 여러분을 진심으로 초대합니다.
+                월드비전 합창단의 여정 속으로, <br></br>여러분을 진심으로
+                초대합니다.
               </p>
             </div>
           </motion.div>
