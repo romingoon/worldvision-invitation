@@ -47,12 +47,10 @@ export function HomePage({
         >
           <div className="space-y-4">
             <p
-              className="text-content text-sm tracking-wider"
+              className="font-NanumBarunGothic text-content text-sm tracking-wider"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 700,
-                fontFamily:
-                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.85rem, 2.6vw, 1rem)',
                 textShadow:
                   '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
@@ -67,14 +65,12 @@ export function HomePage({
           {/* Main Title - Calligraphy Style */}
           <div className="px-4 py-8">
             <h1
-              className={`leading-tight tracking-wide`}
+              className={`font-NanumBarunGothic leading-tight tracking-wide`}
               style={{
                 fontSize: 'clamp(2.2rem, 6vw, 3.5rem)',
                 fontWeight: 900,
                 color: '#FFFFFF',
                 letterSpacing: '0.02em',
-                fontFamily:
-                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 transform: 'rotate(-1deg)',
                 wordBreak: 'keep-all',
                 maxWidth: '90vw',
@@ -92,8 +88,6 @@ export function HomePage({
               style={{
                 color: '#FFFFFF',
                 fontWeight: 700,
-                fontFamily:
-                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.95rem, 3vw, 1.125rem)',
                 textShadow:
                   '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
@@ -106,8 +100,6 @@ export function HomePage({
               style={{
                 color: '#FFFFFF',
                 fontWeight: 600,
-                fontFamily:
-                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.9rem, 2.6vw, 1.05rem)',
                 textShadow:
                   '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
@@ -122,8 +114,6 @@ export function HomePage({
               style={{
                 color: '#FFFFFF',
                 fontWeight: 600,
-                fontFamily:
-                  "'Nanum Barun Gothic', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Malgun Gothic', sans-serif",
                 fontSize: 'clamp(0.9rem, 2.6vw, 1.05rem)',
                 textShadow:
                   '0 2px 8px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5)',
@@ -147,7 +137,6 @@ export function HomePage({
               color: '#1A1410',
               fontWeight: 700,
               textShadow: '0 1px 2px rgba(255,255,255,0.8)',
-              fontFamily: "'Nanum Barun Gothic', 'Noto Serif KR', serif",
               wordBreak: 'keep-all',
             }}
           >
