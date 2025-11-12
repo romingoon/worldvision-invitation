@@ -167,7 +167,7 @@ export function ShareSection({ url }: ShareSectionProps) {
             className="pt-6"
           >
             <p className="text-xs" style={{ color: '#999999' }}>
-              월드비전 합창단의 여정 속으로, 여러분을 진심으로 초대합니다!
+              월드비전 합창단의 여정 속으로, 여러분을 초대합니다!
             </p>
           </motion.div>
         </motion.div>
