@@ -10,12 +10,12 @@ interface ShareSectionProps {
   title?: string;
 }
 
-export function ShareSection({ url, title }: ShareSectionProps) {
+export function ShareSection({ url }: ShareSectionProps) {
   const [copied, setCopied] = useState(false);
   // SSR 안전한 현재 URL 계산 (상태 불필요)
   const currentUrl =
     url || (typeof window !== 'undefined' ? window.location.href : '');
-  const imageUrl = 'https://concert-invitation.vercel.app/images/kakaothum.jpg';
+  const imageUrl = 'https://concert-invitation.vercel.app/images/thumnail.png';
   const pageUrl = 'https://concert-invitation.vercel.app';
 
   const handleKakaoShare = () => {
@@ -32,7 +32,7 @@ export function ShareSection({ url, title }: ShareSectionProps) {
     Kakao.Share.sendDefault({
       objectType: 'feed',
       content: {
-        title: title || '2025 월드비전 합창단 기획연주 <Sound of Mission> 초대장',
+        title: '2025 월드비전 합창단 기획연주 <Sound of Mission> 초대장',
         description: '2025년 11월 27일(목) 오후 6시 30분\n영락교회 베다니홀',
         imageUrl: imageUrl,
         link: {
