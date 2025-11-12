@@ -35,32 +35,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
-      <head>
-        {/* 로컬 폰트 프리로드 - 카카오톡 인앱브라우저 호환 */}
-        <link
-          rel="preload"
-          href="/fonts/NanumBarunGothic.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/NanumBarunGothicRegular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/NanumBarunGothicBold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body className={`${NanumBarunGothic.variable}`} suppressHydrationWarning>
+    <html lang="ko" className={NanumBarunGothic.className}>
+      <head></head>
+      <body suppressHydrationWarning>
         <ImagePreloader />
         <main className="pb-20">
           {children} <Analytics />
