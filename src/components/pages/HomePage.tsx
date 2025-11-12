@@ -47,7 +47,7 @@ export function HomePage({
         >
           <div className="space-y-4">
             <p
-              className="font-NanumBarun text-content text-sm tracking-wider"
+              className="text-content text-sm tracking-wider"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 700,
@@ -65,7 +65,7 @@ export function HomePage({
           {/* Main Title - Calligraphy Style */}
           <div className="px-4 py-8">
             <h1
-              className={`font-NanumBarun leading-tight tracking-wide`}
+              className={`leading-tight tracking-wide`}
               style={{
                 fontSize: 'clamp(2.2rem, 6vw, 3.5rem)',
                 fontWeight: 900,
@@ -84,7 +84,7 @@ export function HomePage({
 
           <div className="space-y-3 pt-4">
             <p
-              className="font-NanumBarun text-base"
+              className="text-base"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 700,
@@ -96,7 +96,7 @@ export function HomePage({
               {concertDate}
             </p>
             <div
-              className="font-NanumBarun text-sm"
+              className="text-sm"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 600,
@@ -110,7 +110,7 @@ export function HomePage({
               <p>{concertTime2}</p>
             </div>{' '}
             <p
-              className="font-NanumBarun text-sm"
+              className="text-sm"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 600,
@@ -132,7 +132,7 @@ export function HomePage({
           className="text-center mt-12"
         >
           <p
-            className="font-NanumBarunGothic text-lg px-8 py-3 rounded-2xl inline-block bg-white/70 backdrop-blur-sm shadow-2xl ring-1 ring-black/20"
+            className="text-lg px-8 py-3 rounded-2xl inline-block bg-white/70 backdrop-blur-sm shadow-2xl ring-1 ring-black/20"
             style={{
               color: '#1A1410',
               fontWeight: 700,

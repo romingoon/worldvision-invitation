@@ -22,13 +22,13 @@ export function ConcertInfoPage({ title }: ConcertInfoPageProps) {
           className="pt-8 pb-6 px-6 text-center"
         >
           <h2
-            className="font-NanumBarunGothic text-2xl mb-1"
+            className="text-2xl mb-1"
             style={{ color: '#333333' }}
           >
             연주회 소개
           </h2>
           <p
-            className="font-NanumBarunGothic text-sm"
+            className="text-sm"
             style={{ color: '#666666' }}
           >
             {title}
@@ -41,24 +41,24 @@ export function ConcertInfoPage({ title }: ConcertInfoPageProps) {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-2xl p-6 shadow-lg font-NanumBarunGothic"
+            className="bg-white rounded-2xl p-6 shadow-lg"
           >
             <div className="flex items-center gap-2.5 mb-4">
               <div
-                className="p-2 rounded-lg font-NanumBarunGothic"
+                className="p-2 rounded-lg"
                 style={{ backgroundColor: '#FFB88C' }}
               >
                 <Music className="w-5 h-5" style={{ color: '#FF6B35' }} />
               </div>
               <h3
-                className="text-lg font-NanumBarunGothic"
+                className="text-lg"
                 style={{ color: '#333333' }}
               >
                 연주회 소개
               </h3>
             </div>
             <div
-              className="space-y-3.5 text-sm leading-relaxed font-NanumBarunGothic"
+              className="space-y-3.5 text-sm leading-relaxed"
               style={{ color: '#333333' }}
             >
               <p>

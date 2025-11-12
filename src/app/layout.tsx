@@ -4,6 +4,14 @@ import ImagePreloader from '../components/ImagePreloader';
 import { Analytics } from '@vercel/analytics/next';
 import KakaoScript from '../components/KakaoScript';
 import BackgroundMusic from '../components/BackgroundMusic';
+import { Nanum_Gothic } from 'next/font/google';
+
+const nanumGothic = Nanum_Gothic({
+  weight: ['400', '700', '800'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-nanum-gothic',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://worldvision-invitation.vercel.app/'),
@@ -34,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={nanumGothic.variable}>
       <head></head>
       <body suppressHydrationWarning>
         <ImagePreloader />
