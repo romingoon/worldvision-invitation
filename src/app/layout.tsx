@@ -43,9 +43,12 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${NanumBarun.variable} font-NanumBarun`}>
       <head></head>
-      <body suppressHydrationWarning>
+      <body
+        className={`${NanumBarun.variable} font-NanumBarun`}
+        suppressHydrationWarning
+      >
         <ImagePreloader />
-        <main className="pb-20">
+        <main className={`${NanumBarun.variable} font-NanumBarun pb-20`}>
           {children} <Analytics />
           <KakaoScript />
           <BackgroundMusic />
