@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/next';
 import KakaoScript from '../components/KakaoScript';
 import BackgroundMusic from '../components/BackgroundMusic';
 import localFont from 'next/font/local';
+import { NanumBarunGothic } from './font/fonts';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://worldvision-invitation.vercel.app/'),
@@ -40,7 +41,7 @@ const NanumBarun = localFont({
       path: './font/NanumBarunGothicBold.woff2',
       weight: '700',
       style: 'normal',
-    }
+    },
   ],
   variable: '--font-NanumBarun',
   display: 'swap',
@@ -53,9 +54,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={NanumBarun.variable}>
+    <html lang="ko" className={NanumBarunGothic.variable}>
       <head></head>
-      <body suppressHydrationWarning className={NanumBarun.className}>
+      <body suppressHydrationWarning className={NanumBarunGothic.className}>
         <ImagePreloader />
         <main className="pb-20">
           {children} <Analytics />
