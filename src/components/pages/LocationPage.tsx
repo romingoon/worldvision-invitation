@@ -134,7 +134,7 @@ export function LocationPage({ venue, venueAddress }: LocationPageProps) {
       const appStoreUrl = 'https://itunes.apple.com/app/id311867728?mt=8';
       openIOSApp(naverMapUrl, appStoreUrl);
     } else {
-      window.open('https://naver.me/G657fW17', '_blank');
+      window.open('https://naver.me/Gsj2DOMy', '_blank');
     }
   };
 
