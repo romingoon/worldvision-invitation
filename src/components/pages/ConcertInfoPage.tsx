@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Music, Heart } from 'lucide-react';
+import { Music, Heart, Info } from 'lucide-react';
 
 interface ConcertInfoPageProps {
   title: string;
@@ -110,11 +110,38 @@ export function ConcertInfoPage({ title }: ConcertInfoPageProps) {
             </div>
           </motion.div>
 
+          {/* Notice */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="bg-white rounded-2xl p-6 shadow-lg"
+          >
+            <div className="flex items-center gap-2.5 mb-4">
+              <div
+                className="p-2 rounded-lg"
+                style={{ backgroundColor: '#FFB88C' }}
+              >
+                <Info className="w-5 h-5" style={{ color: '#FF6B35' }} />
+              </div>
+              <h3 className="text-lg" style={{ color: '#333333' }}>
+                안내사항
+              </h3>
+            </div>
+            <div
+              className="space-y-2 text-sm leading-relaxed"
+              style={{ color: '#333333' }}
+            >
+              <p>- 티켓/초대권은 따로 없습니다.</p>
+              <p>- 18시부터 선착순 입장합니다.</p>
+            </div>
+          </motion.div>
+
           {/* Quote */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.5 }}
             className="rounded-2xl p-6 shadow-sm"
             style={{ backgroundColor: '#333333' }}
           >
