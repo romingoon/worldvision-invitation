@@ -9,17 +9,17 @@ import localFont from 'next/font/local';
 const NanumBarunGothic = localFont({
   src: [
     {
-      path: './fonts/NanumBarunGothic.woff2',
+      path: '../assets/fonts/NanumBarunGothic.woff2',
       weight: '300',
       style: 'normal',
     },
     {
-      path: './fonts/NanumBarunGothicRegular.woff2',
+      path: '../assets/fonts/NanumBarunGothicRegular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/NanumBarunGothicBold.woff2',
+      path: '../assets/fonts/NanumBarunGothicBold.woff2',
       weight: '700',
       style: 'normal',
     },
