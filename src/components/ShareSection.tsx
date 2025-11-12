@@ -15,8 +15,9 @@ export function ShareSection({ url }: ShareSectionProps) {
   // SSR 안전한 현재 URL 계산 (상태 불필요)
   const currentUrl =
     url || (typeof window !== 'undefined' ? window.location.href : '');
-  const imageUrl = 'https://concert-invitation.vercel.app/images/thumbnail.png';
-  const pageUrl = 'https://concert-invitation.vercel.app';
+  const imageUrl =
+    'https://worldvision-invitation.vercel.app/images/thumbnail.png';
+  const pageUrl = 'https://worldvision-invitation.vercel.app/';
 
   const handleKakaoShare = () => {
     if (typeof window === 'undefined') return;
