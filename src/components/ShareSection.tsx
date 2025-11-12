@@ -16,7 +16,7 @@ export function ShareSection({ url }: ShareSectionProps) {
   const currentUrl =
     url || (typeof window !== 'undefined' ? window.location.href : '');
   const imageUrl =
-    'https://worldvision-invitation.vercel.app/images/thumbnail.png';
+    'https://worldvision-invitation.vercel.app/images/thumbnail.jpg';
   const pageUrl = 'https://worldvision-invitation.vercel.app/';
 
   const handleKakaoShare = () => {
