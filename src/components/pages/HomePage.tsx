@@ -84,7 +84,7 @@ export function HomePage({
 
           <div className="space-y-3 pt-4">
             <p
-              className="text-base"
+              className="font-NanumBarunGothic text-base"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 700,
@@ -96,7 +96,7 @@ export function HomePage({
               {concertDate}
             </p>
             <div
-              className="text-sm"
+              className="font-NanumBarunGothic text-sm"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 600,
@@ -110,7 +110,7 @@ export function HomePage({
               <p>{concertTime2}</p>
             </div>{' '}
             <p
-              className="text-sm"
+              className="font-NanumBarunGothic text-sm"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 600,
@@ -132,7 +132,7 @@ export function HomePage({
           className="text-center mt-12"
         >
           <p
-            className="text-lg px-8 py-3 rounded-2xl inline-block bg-white/70 backdrop-blur-sm shadow-2xl ring-1 ring-black/20"
+            className="font-NanumBarunGothic text-lg px-8 py-3 rounded-2xl inline-block bg-white/70 backdrop-blur-sm shadow-2xl ring-1 ring-black/20"
             style={{
               color: '#1A1410',
               fontWeight: 700,
