@@ -32,7 +32,7 @@ export function ShareSection({ url }: ShareSectionProps) {
     Kakao.Share.sendDefault({
       objectType: 'feed',
       content: {
-        title: '2025 월드비전 합창단 기획연주 <Sound of Mission> 초대장',
+        title: '2025 월드비전 합창단 기획연주\n<Sound of Mission> 초대장',
         description: '2025년 11월 27일(목) 오후 6시 30분\n영락교회 베다니홀',
         imageUrl: imageUrl,
         link: {
