@@ -47,7 +47,7 @@ export function HomePage({
         >
           <div className="space-y-4">
             <p
-              className="font-NanumBarunGothic text-content text-sm tracking-wider"
+              className="font-NanumBarun text-content text-sm tracking-wider"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 700,
@@ -65,7 +65,7 @@ export function HomePage({
           {/* Main Title - Calligraphy Style */}
           <div className="px-4 py-8">
             <h1
-              className={`font-NanumBarunGothic leading-tight tracking-wide`}
+              className={`font-NanumBarun leading-tight tracking-wide`}
               style={{
                 fontSize: 'clamp(2.2rem, 6vw, 3.5rem)',
                 fontWeight: 900,
@@ -84,7 +84,7 @@ export function HomePage({
 
           <div className="space-y-3 pt-4">
             <p
-              className="font-NanumBarunGothic text-base"
+              className="font-NanumBarun text-base"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 700,
@@ -96,7 +96,7 @@ export function HomePage({
               {concertDate}
             </p>
             <div
-              className="font-NanumBarunGothic text-sm"
+              className="font-NanumBarun text-sm"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 600,
@@ -110,7 +110,7 @@ export function HomePage({
               <p>{concertTime2}</p>
             </div>{' '}
             <p
-              className="font-NanumBarunGothic text-sm"
+              className="font-NanumBarun text-sm"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 600,
