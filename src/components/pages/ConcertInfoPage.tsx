@@ -62,7 +62,7 @@ export function ConcertInfoPage({ title }: ConcertInfoPageProps) {
               style={{ color: '#333333' }}
             >
               <p>
-                &lt; Sound of Mission&gt; 은 1960년, 전쟁의 상처 속에서 희망의
+                &lt;Sound of Mission&gt; 은 1960년, 전쟁의 상처 속에서 희망의
                 노래로 시작되었던 월드비전 합창단의 여정을 돌아보고, 그 아름다운
                 발자취를 함께 기억하는 시간으로 기획되었습니다. 특별히 이번
                 무대에는 동문합창단이 함께하여, 여러 세대가 한마음으로 노래하고

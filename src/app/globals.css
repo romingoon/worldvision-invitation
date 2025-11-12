@@ -153,6 +153,7 @@
     @apply bg-background text-foreground;
     background-color: var(--color-beige);
     color: var(--color-dark-gray);
+
     /* 카카오톡 브라우저 호환성을 위한 fallback 폰트 우선순위 개선 */
     font-family: var(--font-NanumBarunGothic), 'Nanum Barun Gothic',
       'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕',
@@ -189,4 +190,15 @@
 }
 .text-content {
   white-space: pre-line;
+}
+
+@layer theme {
+  :root,
+  :host {
+    --font-NanumBarun: var(--font-NanumBarun);
+  }
+}
+
+@theme {
+  --font-NanumBarun: var(--font-NanumBarun);
 }
