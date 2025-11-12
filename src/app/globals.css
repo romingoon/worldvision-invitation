@@ -189,13 +189,3 @@
 .text-content {
   white-space: pre-line;
 }
-@layer theme {
-  :root,
-  :host {
-    --font-NanumBarunGothic: var(--font-NanumBarunGothic);
-  }
-}
-
-@theme {
-  --font-NanumBarunGothic: var(--font-NanumBarunGothic);
-}
