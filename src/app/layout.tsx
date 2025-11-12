@@ -4,7 +4,29 @@ import ImagePreloader from '../components/ImagePreloader';
 import { Analytics } from '@vercel/analytics/next';
 import KakaoScript from '../components/KakaoScript';
 import BackgroundMusic from '../components/BackgroundMusic';
+import localFont from 'next/font/local';
 
+const NanumBarunGothic = localFont({
+  src: [
+    {
+      path: './fonts/NanumBarunGothic.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/NanumBarunGothicRegular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/NanumBarunGothicBold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-NanumBarunGothic',
+  display: 'swap',
+});
 export const metadata: Metadata = {
   metadataBase: new URL('https://worldvision-invitation.vercel.app/'),
   title: '한국 월드비전 창립 75주년 기념예배&기념음악회 - Sound of Mission',
@@ -59,7 +81,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body suppressHydrationWarning>
+      <body className={NanumBarunGothic.variable} suppressHydrationWarning>
         <ImagePreloader />
         <main className="pb-20">
           {children} <Analytics />
