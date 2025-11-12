@@ -59,7 +59,7 @@ export function HomePage({
                 transform: 'rotate(-1deg)',
               }}
             >
-              {subtitle}
+              {title}
             </p>
           </div>
 
@@ -79,7 +79,7 @@ export function HomePage({
                 maxWidth: '90vw',
               }}
             >
-              {title}
+              {subtitle}
             </h1>
           </div>
 
