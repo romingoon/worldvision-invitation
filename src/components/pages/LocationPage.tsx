@@ -720,6 +720,13 @@ export function LocationPage({
                       방문하시는 모든 분들께 편의를 드리고자 영락교회 지하주차장
                       무료 이용이 가능합니다.
                     </p>
+
+                    <p
+                      className="text-sm leading-relaxed"
+                      style={{ color: '#666666' }}
+                    >
+                      만차시 인근 공영주차장을 이용하시기 바랍니다.
+                    </p>
                   </div>
                 </div>
               </div>

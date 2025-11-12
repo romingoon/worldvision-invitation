@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className="font-sans">
+    <html lang="ko" className="font-NanumBarun">
       <head></head>
       <body suppressHydrationWarning>
         <ImagePreloader />
