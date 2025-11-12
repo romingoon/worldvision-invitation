@@ -34,7 +34,7 @@ export function ShareSection({ url }: ShareSectionProps) {
       objectType: 'feed',
       content: {
         title:
-          '한국 월드비전 창립 75주년 기념예배 & 기념음악회\n<Sound of Mission> 초대장',
+          '한국 월드비전 창립 75주년\n기념예배&기념음악회\n<Sound of Mission> 초대장',
         description: '2025년 11월 27일(목) 오후 6시 30분\n영락교회 베다니홀',
         imageUrl: imageUrl,
         link: {

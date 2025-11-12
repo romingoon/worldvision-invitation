@@ -20,7 +20,7 @@ export default function App() {
   });
 
   const concertData = {
-    title: '한국 월드비전 창립 75주년 기념예배 & 기념음악회',
+    title: '한국 월드비전 창립 75주년\n기념예배&기념음악회',
     subtitle: 'Sound of Mission',
     organizer: '월드비전',
     concertDate: '2025년 11월 27일(목)',

@@ -127,8 +127,21 @@
     @apply bg-background text-foreground;
     background-color: var(--color-beige);
     color: var(--color-dark-gray);
-    font-family: 'Nanum Barun Gothic', -apple-system, BlinkMacSystemFont,
-      'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+    /* 카카오톡 브라우저 호환성을 위한 fallback 폰트 우선순위 개선 */
+    font-family: 'Nanum Barun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR',
+      'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', -apple-system,
+      BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+/* 폰트 로딩 최적화 - 카카오톡 브라우저 대응 */
+@supports (font-display: block) {
+  @font-face {
+    font-family: 'Nanum Barun Gothic Fallback';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Apple SD Gothic Neo'), local('Noto Sans KR'), local('Malgun Gothic');
+    font-display: block;
   }
 }
 

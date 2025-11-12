@@ -48,7 +48,7 @@ export function HomePage({
         >
           <div className="space-y-4">
             <p
-              className="text-sm tracking-wider"
+              className="text-content text-sm tracking-wider"
               style={{
                 color: '#FFFFFF',
                 fontWeight: 700,

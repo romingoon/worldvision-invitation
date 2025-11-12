@@ -4,11 +4,12 @@ import ImagePreloader from '../components/ImagePreloader';
 import { Analytics } from '@vercel/analytics/next';
 import KakaoScript from '../components/KakaoScript';
 import BackgroundMusic from '../components/BackgroundMusic';
+import Script from 'next/script';
 
 const nanumBarunGothic = {
   style: {
     fontFamily:
-      "'Nanum Barun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif",
+      "'Nanum Barun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
   },
 };
 
@@ -43,9 +44,21 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        {/* 폰트 프리로드 - 카카오톡 브라우저 호환성 개선 */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Nanum+Barun+Gothic:wght@300;400;700&display=swap"
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        {/* Google Fonts 직접 로드 - PC 웹브라우저 호환성 */}
+        <link
           rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Nanum+Barun+Gothic:wght@300;400;700&display=swap"
         />
       </head>
       <body style={nanumBarunGothic.style} suppressHydrationWarning>
