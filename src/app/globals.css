@@ -6,6 +6,7 @@
 @theme {
   --font-NanumBarun: var(--font-NanumBarun);
   --font-sans: var(--font-NanumBarun);
+  --default-font-family: var(--font-NanumBarun), var(--font-sans);
 }
 
 @theme inline {
