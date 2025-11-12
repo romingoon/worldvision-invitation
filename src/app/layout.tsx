@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: '2025 월드비전 합창단 기획연주',
   description: 'Sound of Mission',
   openGraph: {
-    title: '2025 월드비전 합창단 기획연주',
+    title: '2025 월드비전 합창단 기획연주 - Sound of Mission ',
     description: 'Sound of Mission',
     url: 'https://worldvision-invitation.vercel.app',
     siteName: '2025 월드비전 합창단 기획연주',

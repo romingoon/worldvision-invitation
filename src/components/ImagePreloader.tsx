@@ -10,7 +10,7 @@ const ImagePreloader: React.FC = () => {
     };
 
     // 배경 이미지 프리로드
-    preloadImage('/images/background.jpg');
+    preloadImage('/images/background.png');
   }, []);
 
   return null;

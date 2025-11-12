@@ -134,7 +134,7 @@ export function HomePage({
           className="text-center mt-12"
         >
           <p
-            className="text-lg text-white/95 px-8 py-3 rounded-full inline-block bg-black/40 backdrop-blur-[2px] shadow-lg ring-1 ring-white/10"
+            className="text-lg text-white/95 px-8 py-3 rounded-2xl inline-block bg-black/40 backdrop-blur-[2px] shadow-lg ring-1 ring-white/10"
             style={{
               color: '#FFFEF7',
               fontWeight: 500,
