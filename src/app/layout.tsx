@@ -7,8 +7,8 @@ import BackgroundMusic from '../components/BackgroundMusic';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://worldvision-invitation.vercel.app/'),
-  title: '2025 월드비전 합창단 기획연주',
-  description: 'Sound of Mission',
+  title: '2025 월드비전 합창단 기획연주 - Sound of Mission',
+  description: '2025년 11월 27일(목) 오후 6시 30분 영락교회 베다니홀',
   openGraph: {
     title: '2025 월드비전 합창단 기획연주 - Sound of Mission ',
     description: 'Sound of Mission',
