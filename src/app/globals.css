@@ -2,13 +2,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Nanum Barun Gothic 로컬 폰트 - 카카오톡 인앱브라우저 호환 */
-@theme {
-  --font-NanumBarun: var(--font-NanumBarun);
-  --font-sans: var(--font-NanumBarun);
-  --default-font-family: var(--font-NanumBarun), var(--font-sans);
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -131,20 +124,27 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html,
+  body {
+    font-family: var(--font-NanumBarun), 'Nanum Barun Gothic',
+      'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕',
+      'Dotum', '돋움', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     @apply bg-background text-foreground;
     background-color: var(--color-beige);
     color: var(--color-dark-gray);
-    --font-NanumBarun: var(--font-NanumBarun);
-
-    /* 카카오톡 브라우저 호환성을 위한 fallback 폰트 우선순위 개선 */
-    font-family: var(--font-NanumBarun), 'Nanum Barun Gothic',
-      'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕',
-      'Dotum', '돋움', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
-  @theme {
-    --font-NanumBarun: var(--font-NanumBarun);
+  /* 모든 요소에 폰트 강제 적용 - 카카오톡 인앱 브라우저 호환 */
+  *,
+  *::before,
+  *::after {
+    font-family: inherit;
   }
 }
 
@@ -174,23 +174,8 @@
   .bg-orange-light {
     background-color: var(--color-orange-light);
   }
-  --font-NanumBarun: var(--font-NanumBarun);
 
   .text-content {
     white-space: pre-line;
   }
-}
-.text-content {
-  white-space: pre-line;
-}
-
-@layer theme {
-  :root,
-  :host {
-    --font-NanumBarun: var(--font-NanumBarun);
-  }
-}
-
-@theme {
-  --font-NanumBarun: var(--font-NanumBarun);
 }

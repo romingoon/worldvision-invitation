@@ -30,9 +30,21 @@ export const metadata: Metadata = {
 };
 
 const NanumBarun = localFont({
-  src: './font/NanumBarunGothic.ttf',
+  src: [
+    {
+      path: './font/NanumBarunGothicRegular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './font/NanumBarunGothicBold.woff2',
+      weight: '700',
+      style: 'normal',
+    }
+  ],
   variable: '--font-NanumBarun',
   display: 'swap',
+  preload: true,
 });
 
 export default function RootLayout({
@@ -43,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className={NanumBarun.variable}>
       <head></head>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className={NanumBarun.className}>
         <ImagePreloader />
         <main className="pb-20">
           {children} <Analytics />
