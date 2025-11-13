@@ -575,7 +575,8 @@ export function LocationPage({
                         fontSize: 'clamp(0.88rem, 1.6vw, 1rem)',
                       }}
                     >
-                      - (2, 3호선) 을지로3가역 하차, 12번 출구에서 도보 5분
+                      - (2, 3호선) 을지로3가역 하차,<br></br> 12번 출구에서 도보
+                      5분
                     </p>
                     <p
                       className="text-sm leading-relaxed mb-2"
@@ -587,7 +588,8 @@ export function LocationPage({
                         fontSize: 'clamp(0.88rem, 1.6vw, 1rem)',
                       }}
                     >
-                      - (3, 4호선) 충무로역 하차, 6번 출구에서 도보 10분
+                      - (3, 4호선) 충무로역 하차,<br></br> 6번 출구에서 도보
+                      10분
                     </p>
                     <p
                       className="text-sm leading-relaxed"
@@ -599,7 +601,7 @@ export function LocationPage({
                         fontSize: 'clamp(0.88rem, 1.6vw, 1rem)',
                       }}
                     >
-                      - (4호선) 명동역 하차, 10번 출구에서 도보 10분
+                      - (4호선) 명동역 하차,<br></br> 10번 출구에서 도보 10분
                     </p>
                   </div>
                 </div>
@@ -711,7 +713,6 @@ export function LocationPage({
                       style={{ color: '#666666' }}
                     >
                       공연에 오시는 분들을 위해 영락교회 지하주차장이 개방되며,
-                      <br></br>
                       방문하시는 모든 분들께 편의를 드리고자 영락교회
                       지하주차장을 무료로 이용 가능하십니다.{' '}
                     </p>
