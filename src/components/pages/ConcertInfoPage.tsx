@@ -21,16 +21,10 @@ export function ConcertInfoPage({ title }: ConcertInfoPageProps) {
           animate={{ opacity: 1, y: 0 }}
           className="pt-8 pb-6 px-6 text-center"
         >
-          <h2
-            className="text-2xl mb-1"
-            style={{ color: '#333333' }}
-          >
+          <h2 className="text-2xl mb-1" style={{ color: '#333333' }}>
             연주회 소개
           </h2>
-          <p
-            className="text-sm"
-            style={{ color: '#666666' }}
-          >
+          <p className="text-sm" style={{ color: '#666666' }}>
             {title}
           </p>
         </motion.div>
@@ -50,10 +44,7 @@ export function ConcertInfoPage({ title }: ConcertInfoPageProps) {
               >
                 <Music className="w-5 h-5" style={{ color: '#FF6B35' }} />
               </div>
-              <h3
-                className="text-lg"
-                style={{ color: '#333333' }}
-              >
+              <h3 className="text-lg" style={{ color: '#333333' }}>
                 연주회 소개
               </h3>
             </div>
@@ -97,7 +88,7 @@ export function ConcertInfoPage({ title }: ConcertInfoPageProps) {
               style={{ color: '#333333' }}
             >
               <p>
-                1960년, 전쟁의 잿더미 속에서 누군가는 노래로 희망을 심었습니다
+                1960년, 전쟁의 잿더미 속에서 누군가는 노래로 희망을 심었습니다.
               </p>
               <p>
                 눈물과 아픔이 가시지 않은 땅 위에서도 작은 목소리들이 서로를
