@@ -129,7 +129,7 @@ export function HomePage({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-center mt-12"
+          className="text-center mt-4"
         >
           <p
             className="text-lg px-8 py-3 rounded-2xl inline-block bg-white/70 backdrop-blur-sm shadow-2xl ring-1 ring-black/20"

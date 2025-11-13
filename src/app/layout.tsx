@@ -21,6 +21,13 @@ const nanumBarunGothic = localFont({
   ],
   variable: '--font-nanum-barun-gothic',
   display: 'swap',
+  preload: true,
+  fallback: [
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'sans-serif',
+  ],
 });
 
 export const metadata: Metadata = {
@@ -54,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className={nanumBarunGothic.variable}>
       <head></head>
-      <body suppressHydrationWarning>
+      <body className={nanumBarunGothic.className} suppressHydrationWarning>
         <ImagePreloader />
         <main className="pb-20">
           {children} <Analytics />
