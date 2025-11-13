@@ -4,13 +4,23 @@ import ImagePreloader from '../components/ImagePreloader';
 import { Analytics } from '@vercel/analytics/next';
 import KakaoScript from '../components/KakaoScript';
 import BackgroundMusic from '../components/BackgroundMusic';
-import { Nanum_Gothic } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const nanumGothic = Nanum_Gothic({
-  weight: ['400', '700', '800'],
-  subsets: ['latin'],
+const nanumBarunGothic = localFont({
+  src: [
+    {
+      path: './fonts/NanumBarunGothic.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/NanumBarunGothicBold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-nanum-barun-gothic',
   display: 'swap',
-  variable: '--font-nanum-gothic',
 });
 
 export const metadata: Metadata = {
@@ -42,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={nanumGothic.variable}>
+    <html lang="ko" className={nanumBarunGothic.variable}>
       <head></head>
       <body suppressHydrationWarning>
         <ImagePreloader />
